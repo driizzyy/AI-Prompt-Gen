@@ -62,7 +62,7 @@ Optimized templates for various use cases:
 
 ## 🚀 Live Demo
 
-Visit the live application: [AI Prompt Generator Pro](https://driizzyy.github.io/AI-Promp-Gen/)
+Visit the live application: [AI Prompt Generator Pro](https://driizzyy.github.io/AI-Prompt-Gen/)
 
 ## 📁 Project Structure
 
@@ -424,3 +424,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Made with ❤️ by [driizzyy](https://github.com/driizzyy)
 
 </div>
+
