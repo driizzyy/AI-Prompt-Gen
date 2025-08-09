@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator Pro - Transform Simple Ideas into Powerful AI Prompts</title>
+    <meta name="description" content="Professional AI prompt generator that transforms simple ideas into detailed, optimized prompts for various AI models and platforms.">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="floating-particles"></div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-brain brand-icon"></i>
+                <span class="brand-text">AI Prompt Generator Pro</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="https://github.com/driizzyy/AI-Promp-Gen/" target="_blank" class="nav-link github-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Transform Your Ideas into
+                        <span class="gradient-text">Professional AI Prompts</span>
+                    </h1>
+                    <p class="hero-description">
+                        Convert simple text into detailed, optimized prompts that unlock the full potential of AI models.
+                        Engineered for precision, designed for professionals.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-counter="prompts">0</span>
+                            <span class="stat-label">Prompts Generated</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-counter="models">0</span>
+                            <span class="stat-label">AI Models Supported</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-counter="accuracy">0</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt Generator Section -->
+        <section class="generator-section">
+            <div class="container">
+                <div class="generator-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-magic"></i>
+                            Generate Your Professional Prompt
+                        </h2>
+                        <p class="card-subtitle">Enter your basic idea and watch it transform into a powerful AI prompt</p>
+                    </div>
+
+                    <div class="card-body">
+                        <form class="generator-form" id="promptForm">
+                            <!-- AI Model Selection -->
+                            <div class="form-group">
+                                <label for="aiModel" class="form-label">
+                                    <i class="fas fa-robot"></i>
+                                    Target AI Model/Platform
+                                </label>
+                                <select id="aiModel" class="form-select" required>
+                                    <option value="">Select AI Model (Optional)</option>
+                                    <option value="chatgpt">ChatGPT (OpenAI)</option>
+                                    <option value="claude">Claude (Anthropic)</option>
+                                    <option value="gemini">Gemini (Google)</option>
+                                    <option value="llama">LLaMA (Meta)</option>
+                                    <option value="copilot">GitHub Copilot</option>
+                                    <option value="general">General Purpose</option>
+                                </select>
+                            </div>
+
+                            <!-- Prompt Type -->
+                            <div class="form-group">
+                                <label for="promptType" class="form-label">
+                                    <i class="fas fa-tags"></i>
+                                    Prompt Category
+                                </label>
+                                <select id="promptType" class="form-select" required>
+                                    <option value="">Select Category</option>
+                                    <option value="creative">Creative Writing</option>
+                                    <option value="code">Code Generation</option>
+                                    <option value="analysis">Data Analysis</option>
+                                    <option value="image">Image Generation</option>
+                                    <option value="business">Business Strategy</option>
+                                    <option value="education">Educational Content</option>
+                                    <option value="marketing">Marketing Copy</option>
+                                    <option value="research">Research & Analysis</option>
+                                    <option value="problem-solving">Problem Solving</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Input Prompt -->
+                            <div class="form-group">
+                                <label for="userPrompt" class="form-label">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    Your Basic Prompt
+                                </label>
+                                <textarea 
+                                    id="userPrompt" 
+                                    class="form-textarea" 
+                                    placeholder="Enter your simple prompt here... e.g., 'Create a website for a bakery'"
+                                    rows="4"
+                                    required
+                                ></textarea>
+                                <div class="input-counter">
+                                    <span id="charCount">0</span> / 1000 characters
+                                </div>
+                            </div>
+
+                            <!-- Complexity Level -->
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-sliders-h"></i>
+                                    Detail Level
+                                </label>
+                                <div class="complexity-slider">
+                                    <input type="range" id="complexityLevel" min="1" max="5" value="3" class="slider">
+                                    <div class="slider-labels">
+                                        <span>Basic</span>
+                                        <span>Detailed</span>
+                                        <span>Advanced</span>
+                                        <span>Expert</span>
+                                        <span>Master</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Generate Button -->
+                            <button type="submit" class="generate-btn" id="generateBtn">
+                                <span class="btn-text">
+                                    <i class="fas fa-sparkles"></i>
+                                    Generate Professional Prompt
+                                </span>
+                                <div class="btn-loader">
+                                    <div class="loader-spinner"></div>
+                                </div>
+                            </button>
+                        </form>
+
+                        <!-- Output Section -->
+                        <div class="output-section" id="outputSection" style="display: none;">
+                            <div class="output-header">
+                                <h3 class="output-title">
+                                    <i class="fas fa-check-circle"></i>
+                                    Your Professional AI Prompt
+                                </h3>
+                                <div class="output-actions">
+                                    <button class="action-btn copy-btn" id="copyBtn">
+                                        <i class="fas fa-copy"></i>
+                                        Copy
+                                    </button>
+                                    <button class="action-btn save-btn" id="saveBtn">
+                                        <i class="fas fa-download"></i>
+                                        Save
+                                    </button>
+                                    <button class="action-btn share-btn" id="shareBtn">
+                                        <i class="fas fa-share"></i>
+                                        Share
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="output-content">
+                                <div class="prompt-output" id="promptOutput"></div>
+                                <div class="output-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Words:</span>
+                                        <span class="stat-value" id="wordCount">0</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Characters:</span>
+                                        <span class="stat-value" id="outputCharCount">0</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Optimized for:</span>
+                                        <span class="stat-value" id="optimizedFor">General</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Powerful Features</h2>
+                    <p class="section-subtitle">Everything you need to create exceptional AI prompts</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="feature-title">AI-Powered Enhancement</h3>
+                        <p class="feature-description">Advanced algorithms analyze and enhance your prompts for maximum effectiveness</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="feature-title">Multi-Model Optimization</h3>
+                        <p class="feature-description">Tailored prompts for different AI models and platforms with specific optimizations</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightning-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">Instant Generation</h3>
+                        <p class="feature-description">Get professional-quality prompts in seconds with real-time processing</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">Performance Analytics</h3>
+                        <p class="feature-description">Track prompt effectiveness and optimize for better results</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="feature-title">Creative Templates</h3>
+                        <p class="feature-description">Pre-built templates for various use cases and industries</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Privacy First</h3>
+                        <p class="feature-description">Your prompts are processed locally - no data stored or shared</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="about-title">About AI Prompt Generator Pro</h2>
+                        <p class="about-description">
+                            Created with passion for AI and productivity, this tool transforms simple ideas into 
+                            professional-grade prompts that unlock the full potential of artificial intelligence. 
+                            Whether you're a developer, content creator, or AI enthusiast, our generator helps you 
+                            communicate more effectively with AI models.
+                        </p>
+                        <div class="about-links">
+                            <a href="https://github.com/driizzyy" target="_blank" class="about-link">
+                                <i class="fab fa-github"></i>
+                                Visit My Profile
+                            </a>
+                            <a href="https://github.com/driizzyy/AI-Promp-Gen/" target="_blank" class="about-link">
+                                <i class="fas fa-code-branch"></i>
+                                Project Repository
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-brain"></i>
+                                <span>AI Logic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Prompt Generator Pro</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/driizzyy/AI-Promp-Gen/" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Repository
+                    </a>
+                    <a href="https://github.com/driizzyy" target="_blank">
+                        <i class="fas fa-user"></i>
+                        Developer
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Prompt Generator Pro. Open source project by driizzyy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/prompt-generator.js"></script>
+    <script src="assets/js/counters.js"></script>
+</body>
+</html>

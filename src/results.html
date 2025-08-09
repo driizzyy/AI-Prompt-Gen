@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Prompt - AI Prompt Generator Pro</title>
+    <meta name="description" content="Your professionally generated AI prompt is ready to use.">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/results.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="floating-particles"></div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-brain">
+                <i class="fas fa-brain"></i>
+                <div class="pulse-rings">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                </div>
+            </div>
+            <h2 class="loading-title">Generating Your Professional AI Prompt</h2>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Analyzing your input...</div>
+            </div>
+            <div class="loading-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="loadingPromptCount">0</span>
+                    <span class="stat-label">Prompts Generated</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">AI Models</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">93%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-brain brand-icon"></i>
+                <span class="brand-text">AI Prompt Generator Pro</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#features" class="nav-link">Features</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/driizzyy/AI-Promp-Gen/" target="_blank" class="nav-link github-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main results-main" id="resultsMain" style="display: none;">
+        <!-- Results Hero -->
+        <section class="results-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1 class="hero-title">
+                        Your <span class="gradient-text">Professional AI Prompt</span> is Ready!
+                    </h1>
+                    <p class="hero-description">
+                        Your prompt has been optimized and enhanced for maximum AI effectiveness.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Content -->
+        <section class="results-content">
+            <div class="container">
+                <div class="results-grid">
+                    <!-- Original Prompt -->
+                    <div class="prompt-card original-prompt">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-pencil-alt"></i>
+                                Your Original Prompt
+                            </h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="prompt-text" id="originalPrompt">
+                                <!-- Original prompt will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Prompt -->
+                    <div class="prompt-card enhanced-prompt">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-magic"></i>
+                                Your Enhanced AI Prompt
+                            </h3>
+                            <div class="card-actions">
+                                <button class="action-btn copy-btn" id="copyBtn" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                                <button class="action-btn download-btn" id="downloadBtn" title="Download as text file">
+                                    <i class="fas fa-download"></i>
+                                    <span>Download</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="prompt-container">
+                                <textarea class="prompt-text" id="enhancedPromptText" readonly></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prompt Info -->
+                <div class="prompt-info">
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Optimized for: <strong id="optimizedFor">General</strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>Complexity: <strong id="complexityLevel">Advanced</strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tags"></i>
+                            <span>Category: <strong id="category">General</strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-font"></i>
+                            <span>Words: <strong id="wordCount">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions Section -->
+                <div class="results-actions">
+                    <div class="action-buttons">
+                        <button class="primary-btn" onclick="window.location.href='../index.html'">
+                            <i class="fas fa-plus"></i>
+                            Generate Another Prompt
+                        </button>
+                        <button class="secondary-btn" onclick="window.history.back()">
+                            <i class="fas fa-arrow-left"></i>
+                            Go Back
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tips Section -->
+                <div class="tips-section">
+                    <h3 class="tips-title">
+                        <i class="fas fa-lightbulb"></i>
+                        How to Use Your Enhanced Prompt
+                    </h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-number">1</div>
+                            <div class="tip-content">
+                                <h4>Copy the Enhanced Prompt</h4>
+                                <p>Use the copy button to get your professionally optimized prompt.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">2</div>
+                            <div class="tip-content">
+                                <h4>Paste into AI Platform</h4>
+                                <p>Use the prompt with your chosen AI model for best results.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">3</div>
+                            <div class="tip-content">
+                                <h4>Customize if Needed</h4>
+                                <p>Feel free to modify the prompt to better suit your specific needs.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">4</div>
+                            <div class="tip-content">
+                                <h4>Save for Future Use</h4>
+                                <p>Download or bookmark this page to reuse the prompt later.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="resultsFooter" style="display: none;">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Prompt Generator Pro</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/driizzyy/AI-Promp-Gen/" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Repository
+                    </a>
+                    <a href="https://github.com/driizzyy" target="_blank">
+                        <i class="fas fa-user"></i>
+                        Developer
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Prompt Generator Pro. Open source project by driizzyy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/prompt-generator.js"></script>
+    <script src="../assets/js/results.js"></script>
+</body>
+</html>

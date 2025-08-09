@@ -1,0 +1,63 @@
+{
+  "name": "ai-prompt-generator-pro",
+  "version": "1.0.0",
+  "description": "Professional AI prompt generator that transforms simple ideas into detailed, optimized prompts for various AI models and platforms",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build step required - static website'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linter configured'",
+    "deploy": "echo 'Deploy to GitHub Pages via repository settings'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/driizzyy/AI-Promp-Gen.git"
+  },
+  "keywords": [
+    "ai",
+    "prompt-engineering",
+    "prompt-generator",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "midjourney",
+    "dalle",
+    "stable-diffusion",
+    "artificial-intelligence",
+    "machine-learning",
+    "web-application",
+    "javascript",
+    "html5",
+    "css3",
+    "responsive-design",
+    "github-pages"
+  ],
+  "author": {
+    "name": "driizzyy",
+    "url": "https://github.com/driizzyy"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/driizzyy/AI-Promp-Gen/issues"
+  },
+  "homepage": "https://driizzyy.github.io/AI-Promp-Gen/",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "files": [
+    "index.html",
+    "src/",
+    "assets/",
+    "README.md"
+  ]
+}

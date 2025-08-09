@@ -1,0 +1,28 @@
+name: AI Prompt Generator Pro
+description: Professional AI prompt generator that transforms simple ideas into detailed, optimized prompts for various AI models and platforms
+url: https://driizzyy.github.io/AI-Promp-Gen/
+baseurl: ""
+
+# GitHub Pages settings
+repository: driizzyy/AI-Promp-Gen
+github_username: driizzyy
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - node_modules/
+  - data/package.json
+  - data/package-lock.json
+  - README.md
+  - LICENSE
+  - .gitignore
